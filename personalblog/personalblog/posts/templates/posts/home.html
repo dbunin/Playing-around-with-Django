@@ -1,0 +1,12 @@
+<h1>Welcome to the Blog</h1>
+<h2>Latest Posts</h2>
+
+{% for post in posts.all %}
+
+<p>{{ post.title }}</p>
+<p>{{ post.getDate }}</p>
+<img src=" {{ post.image.url }} ">
+<p> {{post.summary}} </p>
+<br>
+<br>
+{% endfor %}
