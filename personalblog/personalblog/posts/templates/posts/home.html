@@ -17,13 +17,17 @@
         <div class="collapse navbar-collapse" id="myNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Facebook</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://facebook.com">Facebook</a></li>
             </ul>
         </div>
     </nav>
+    
+    {% load static %}
+    <img src="{% static 'posts/home.jpeg' %}" class="" style="width:100%; position:relative" >
+    <h1 class="text-center" style="position:absolute; top: 20%; color:white; left: 50%; transform: translate(-50%, -50%);">Welcome to the Blog</h1>
     <div class="container">
         <br>
-        <h1 class="text-center">Welcome to the Blog</h1>
+        
         <h2>Latest Posts</h2>
         <hr>
         {% for post in posts.all %}
