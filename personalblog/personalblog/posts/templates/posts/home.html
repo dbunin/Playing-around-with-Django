@@ -3,7 +3,7 @@
 
 {% for post in posts.all %}
 
-<p>{{ post.title }}</p>
+<a href="{% url 'post_detail' post.id %}"><p>{{ post.title }}</p></a>
 <p>{{ post.getDate }}</p>
 <img src=" {{ post.image.url }} ">
 <p> {{post.summary}} </p>

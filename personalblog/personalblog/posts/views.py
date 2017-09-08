@@ -3,7 +3,7 @@ from .models import Post
 
 
 def home(request):
-    posts = Post.objects.order_by('pubDate')
+    posts = Post.objects.order_by('-pubDate')
     return render(request, 'posts/home.html', {'posts': posts})
 
 
