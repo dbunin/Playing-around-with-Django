@@ -21,22 +21,11 @@
             </ul>
         </div>
     </nav>
-    
-    {% load static %}
-    <img src="{% static 'posts/home.jpeg' %}" class="" style="width:100%; position:relative" >
-    <h1 class="text-center" style="position:absolute; top: 20%; color:white; left: 50%; transform: translate(-50%, -50%);">Welcome to the Blog</h1>
+    <br>
+    <br>
     <div class="container">
-        <br>
-        
-        <h2>Latest Posts</h2>
-        <hr>
-        {% for post in posts.all %}
-        
-        <a href="{% url 'post_detail' post.id %}"><h3>{{ post.title }}</h3></a>
-        <h5><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.getDate }}</h5>
-        <img src=" {{ post.image.url }} " class="img-responsive mx-auto d-block" style="max-height:400px;">
-        <p> {{post.summary}} </p>
-        {% endfor %}
+        <h1>About the website</h1>
+        <p>This website was created to help me learn Django</p>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -45,3 +34,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 </html>
+

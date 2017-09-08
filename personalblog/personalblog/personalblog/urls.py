@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from posts import views
+from about import views as aboutView
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -24,4 +25,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
     url(r'^post/(?P<post_id>[0-9]+)/$', views.postDetails, name="post_detail"),
+    url(r'^about', aboutView.about, name="about")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
